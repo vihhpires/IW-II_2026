@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho DOM</title>
+
+```
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+```
+
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <h1>DOM!</h1>
+
+    <h2>O que é DOM?</h2>
+    <p>
+        O DOM (Document Object Model), é uma interface de programação aonde funciona como a ponte entre o código estático da (html) página e a interatividade, acaba criando um "mapa vivo" do site na memória para as linguagens como JavaScript possam entender melhor e modificar em tempo real. Ele faz que o navegador transforme cada parte do documento (tudo) em objetos que podem ser manipulados.
+        A estrutura é sempre seguida por objetivo principal o Document, seguido pelo Html e pode se ramicar entre o head, body e os elementos dentro em si do html e essa estrutra e geralmente chamada de "Estrutura em Árvore".
+        O html é o arquivo de texto estático que você escreve e envia para o servidor e eles se interagem de forma de como o HTML define a estrutura inicial, mas é o DOM que permite que essa estrutura responda a cliques, digitação ou movimentos do mouse do usuário. 
+    </p>
+
+    <h2>O que é um nó (node)?</h2>
+    <p>
+        Um nó é a unidade básica que forma a árvore do DOM; é como se fosse cada ponto de conexão ou "caixinha" de um mapa que o navegador cria para entender o código. Dentro dessa lógica, os tipos funcionam são. 
+        Os ELEMENTOS são as tags em si, como &lt;div&gt;, &lt;button&gt; ou &lt;ul&gt;. Eles ditam a estrutura e servem de contêineres para o que vem dentro. 
+        Os ATRIBUTOS são as propriedades que dão "superpoderes" ou características aos elementos, como um id, uma class ou o href de um link. 
+        E os TEXTOS que é o conteúdo literal que aparece na tela, ou seja, as palavras que ficam entre a abertura e o fechamento de uma tag. 
+        Basicamente, o elemento é a caixa, o atributo é a etiqueta colada nela e o texto é o que está guardado lá dentro — e todos eles são nós.
+    </p>
+
+    <h2>Métodos de seleção</h2>
+    <p>
+        Para selecionar elementos no DOM, o getElementById() é o método mais específico porque ele busca diretamente pelo atributo ID, que é único, e te devolve aquele elemento exato de forma bem rápida. 
+        Já o querySelector() funciona como um seletor universal, onde você usa a mesma sintaxe do CSS (como o ponto para classes ou a hashtag para IDs) para capturar o primeiro elemento que o navegador encontrar no código que corresponda àquela descrição. 
+        Por fim, o querySelectorAll() segue a mesma lógica do seletor CSS, mas a diferença é que ele não para no primeiro resultado; ele varre o documento inteiro e te entrega uma lista com todos os nós que combinam com o que você pediu, o que é perfeito para quando você precisa manipular vários itens do mesmo tipo de uma vez só através de um laço de repetição.
+    </p>
+
+    <h2>innerHTML vs innerText</h2>
+    <p>
+        A diferença principal é como eles lidam com o conteúdo: enquanto o innerText foca apenas no que é visível e textual, ignorando qualquer tag e tratando tudo como texto puro, o innerHTML recupera ou insere todo o conteúdo incluindo as tags HTML. 
+        Isso significa que, se você usar innerText para inserir uma tag &lt;b&gt;, ela vai aparecer escrita literalmente na tela, mas se usar o innerHTML, o navegador vai interpretar a tag e realmente deixar o texto em negrito. 
+        No dia a dia do técnico, a gente prefere o innerText por segurança, já que o innerHTML pode abrir brechas para scripts maliciosos se você estiver lidando com dados que vêm do usuário.    
+    </p>
+
+    <h2>Eventos</h2>
+    <p>
+        Eventos são as interações ou acontecimentos que o navegador detecta, funcionando como gatilhos que avisam ao JavaScript que algo aconteceu para que ele execute uma função. 
+        O onclick é disparado quando o usuário clica em um elemento, sendo o mais comum para botões, enquanto o onchange é ativado quando o valor de um campo é alterado e perde o foco, muito usado em inputs de formulário ou seletores. 
+        Já o onmouseover acontece no momento em que o ponteiro do mouse passa por cima de um elemento, permitindo criar efeitos visuais sem precisar clicar em nada. 
+        No técnico, a gente diz que os eventos são a base da interatividade, pois permitem que a página pare de ser estática e passe a reagir ao comportamento do usuário em tempo real.
+    </p>
+
+    <h2 class="h1two">Parte Prática</h2>
+
+    <p id="texto">Se deu erro, coloca um console.log()… se resolveu, você é um gênio. Se não, coloca mais.</p>
+    <button onclick="mudarTexto()">Mudar Texto</button>
+
+    <h3>Mudar cor de fundo</h3>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+</div>
+
+<script src="javas.js"></script>
+```
+
+</body>
+</html>
